@@ -101,7 +101,7 @@ jobs:
       - checkout
       - run:
           name: Heroku Deploy
-          command: git push https://heroku:900f5ff9-6b73-4d45-ab2e-d16b6268d231@git.heroku.com/morning-mountain-84049.git HEAD:main
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD:main
 
       - run:
           name: Smoke Test
